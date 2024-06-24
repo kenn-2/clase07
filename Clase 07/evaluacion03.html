@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calculadora de Notas</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .autor {
+        margin: 0;
+    }
+    .carrera {
+        margin: 0;
+    }
+</style>
 </head>
 <body>
     <div class="banner">
@@ -22,10 +35,10 @@
 
         <label for="nota1">Nota Práctica 1:</label>
         <input type="number" id="nota1" min="0" max="20" step="1">
-        
+
         <label for="nota2">Nota Práctica 2:</label>
         <input type="number" id="nota2" min="0" max="20" step="1">
-        
+
         <label for="nota3">Nota Práctica 3:</label>
         <input type="number" id="nota3" min="0" max="20" step="1">
 
@@ -47,7 +60,7 @@
 
         <div class="resultado" id="resultado"></div>
     </div>
-    
+
     <div class="botones">
         <button onclick="calcularPromedio()">Calcular Promedio</button>
         <button onclick="limpiar()">Limpiar</button>
@@ -56,6 +69,7 @@
 
     <footer>
         <p class="autor">Autor: Kenneth Sebastian Casas</p>
+        <p class="carrera">Carrera: Ingeniería de Sistemas</p>
     </footer>
 
     <script>
@@ -93,8 +107,8 @@
             document.getElementById('promedioFinal').textContent = promedioFinal.toFixed(2);
 
             var resultadoElement = document.getElementById('resultado');
-            if (promedioFinal >= 10) {
-                resultadoElement.textContent = "Aprobado ";
+            if (promedioFinal >= 13) {
+                resultadoElement.textContent = "Aprobado";
                 resultadoElement.className = "resultado aprobado";
             } else {
                 resultadoElement.textContent = "Desaprobado";
@@ -123,4 +137,3 @@
     </script>
 </body>
 </html>
-
